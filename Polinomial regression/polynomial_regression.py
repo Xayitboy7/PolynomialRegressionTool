@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-dataset = pd.read_csv('C:\\Users\\Lenovo\\Downloads\\Telegram Desktop\\Polinomial regression(Anaconda)\\Polinomial regression\\position_salaries.csv')
+dataset = pd.read_csv('C:\\Users\\Lenovo\\Downloads\\Telegram Desktop\\Polinomial regression(Anaconda)\\Polinomial regression\\Advertising.csv')
 
 
 X = dataset.iloc[:, 1:2].values
@@ -29,8 +29,8 @@ def viz_linear():
     plt.scatter(X, y, color='red')
     plt.plot(X, lin_reg.predict(X), color='blue')
     plt.title('Truth or Bluff (Linear Regression) Khayitboy1')
-    plt.xlabel('Position level')
-    plt.ylabel('Salary')
+    plt.xlabel('Money spent on TV ads ($)')
+    plt.ylabel('Sales')
     plt.show()
     return
 viz_linear()
@@ -47,8 +47,8 @@ def viz_polymonial():
     plt.scatter(X, y, color='red')
     plt.plot(X, pol_reg.predict(poly_reg.fit_transform(X)), color='blue')
     plt.title('Truth or Bluff (Linear Regression) Khayitboy2')
-    plt.xlabel('Position level')
-    plt.ylabel('Salary')
+    plt.xlabel('Money spent on TV ads ($)')
+    plt.ylabel('Sales')
     plt.show()
     return
 viz_polymonial()
@@ -62,8 +62,8 @@ def viz_polymonial_smooth():
     plt.scatter(X, y, color='red')
     plt.plot(X_grid, pol_reg.predict(poly_reg.fit_transform(X_grid)), color='blue')
     plt.title('Truth or Bluff (Linear Regression) Khayitboy3')
-    plt.xlabel('Position level')
-    plt.ylabel('Salary')
+    plt.xlabel('Money spent on TV ads ($)')
+    plt.ylabel('Sales') 
     plt.show()
     return
 viz_polymonial_smooth()
